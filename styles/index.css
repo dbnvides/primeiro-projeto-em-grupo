@@ -1,0 +1,120 @@
+/* mobile S, M, L */
+@import url(./global.css);
+
+body {
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+
+header {
+    width: 100%;
+  
+    background: var(--brand-1);
+}
+
+main {
+    background-color: var(--brand-1);
+}
+
+.imagemLogo {
+    padding: 1.5%;
+    margin: 10px 0;
+}
+
+.divImagem {
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    opacity: 0.5;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.formLogin {
+    width: 100vw;
+    height: 48vh;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 30px;
+    color: white;
+}
+
+.formLogin>h2 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.divInputs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    align-items: center;
+    height: 100vh;
+}
+form>input, form>button {
+    height: 40px;
+    border-radius: 30px;
+    border: none;
+    font-size: 1rem;
+    max-width: 300px;
+    width: 68%;
+}
+form>input {
+    padding-left: 20px;
+}
+form>button {
+    background-color: var(--brand-100);
+    color: white;
+    width: 70%;
+}
+form>button:active {
+    background-color: var(--brand-200);
+}
+
+.divInputs>p {
+    width: 73%;
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-weight: 600;
+}
+.divInputs>button {
+    background-color: var(--brand-1);
+    color: white;
+    width: 70%;
+    height: 40px;
+    border-radius: 30px;
+    font-size: 1rem;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+
+    height: 25px;
+    width: 100%;
+    background-color: var(--brand-1);
+}
+
+@media (min-width: 769px) {
+    .imagemLogo {
+        padding: 1.5%;
+    }
+    form>input {
+        max-width: 300px;
+        width: 300px;
+        
+    }
+    
+}

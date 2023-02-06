@@ -1,0 +1,250 @@
+@import url(../../styles/global.css);
+
+body {
+    width: 100vw;
+
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 9vh;
+    width: 90%;
+    margin: 0 auto;
+}
+
+header>img {
+    height: 30px;
+}
+
+main {
+    width: 100vw;
+}
+
+header div {
+    background-color: var(--white-1);
+    backdrop-filter: blur(2px);
+    padding: 1vh;
+    position: absolute;
+    top: 9vh;
+    left: 0;
+    gap: 10vw;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    z-index: 1;
+}
+
+.naoAparecer {
+    display: none;
+}
+
+.botoes{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.botoes button {
+    width: 100%;
+}
+
+.cabecalho {
+    background-color: var(--brand-1);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    height: 300px;
+    width: 100%;
+
+    position: relative;
+}
+
+.cabecalho>div {
+    background: var(--white-1);
+
+    height: 40%;
+    width: 100%;
+}
+
+.cabecalho>img {
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    object-fit: cover;
+
+    bottom: 20px;
+    border: 4px solid var(--white-1);
+    border-radius: 50%;
+}
+
+.dadosPessoais {
+    display: flex;
+    flex-direction: column;
+    gap: 33px;
+    background-color: var(--modal);
+    border: 2px solid var(--white-1);
+    border-radius: 4px;
+    margin: 20px auto 0 auto;
+    width: 100%;
+    max-width: 480px;
+    padding: 24px;
+}
+
+.dadosPessoais>h1 {
+    font-weight: 700;
+    font-size: 24px;
+
+    color: var(--brand-1);
+
+    text-align: center;
+}
+
+.dadosPessoais>.dados {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+
+    font-weight: 600;
+    font-size: 16px;
+
+    color: var(--black);
+}
+
+.dadosPessoais>.dados>h2>span {
+    color: var(--brand-1);
+}
+
+.dadosPessoais>.botoes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    gap: 20px;
+}
+
+section {
+    width: 90%;
+
+    margin: 90px auto 0 auto;
+}
+
+.secaoDePets{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.listaDePets {
+    width: 100%;
+    max-width: 1024px;
+    height: max-content;
+    max-height: 860px;
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px 0;
+    padding: 10px;
+}
+
+.cardPet2 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 400px;
+    min-width: 250px;
+    max-width: 280px;
+    gap: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 18px -5px var(--brand-1);
+}
+
+.caixaImagem {
+    width: 100%;
+    height: 180px;
+    border-radius: 8px 8px 0 0;
+}
+
+.corpoCard {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 10px 0 10px 0;
+    padding: 10px;
+}
+
+.corpoCard #btnAtualizar {
+    margin-top: 10px;
+}
+
+
+.bgImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+.caixaVazia{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 200px;
+    background-color: var(--white-1);
+    border: 1px solid var(--black);
+    margin: 30px 0;
+    box-shadow: 0px 0px 18px -5px var(--black);
+    border-radius: 8px;
+}
+
+.caixaVazia>h2{
+    font-size: 25px;
+}
+
+.botaoDropdown {
+    background-color: inherit;
+}
+
+.corpoCard span {
+    font-weight: bold;
+}
+
+.corpoCard h3 {
+    text-transform: capitalize;
+}
+
+@media (min-width: 769px) {
+    .dadosPessoais>.botoes {
+        flex-direction: row;
+    }
+
+    .listaDePets{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        overflow: auto;
+    }
+
+    .naoAparecer {
+        display: flex;
+    }
+
+    header div {
+        background-color: inherit;
+        padding: 0;
+        border-top: none;
+        position: relative;
+        top: 0;
+        gap: 5vw;
+        width: fit-content;
+    }
+}

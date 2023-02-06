@@ -1,0 +1,202 @@
+@import url(../../styles/global.css);
+
+body {
+    background-color: var(--white-1);
+    overflow-x: hidden;
+}
+
+header {
+    border-bottom: 1px solid var(--bg-modal);
+    margin-bottom: 1vh;
+    height: 9vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30vw;
+}
+
+.naoAparecer {
+    display: none;
+}
+
+nav {
+    background-color: var(--brand-opaca);
+    backdrop-filter: blur(2px);
+    padding: 1vh;
+    border-bottom: 1px solid var(--brand-1);
+    position: absolute;
+    top: 9vh;
+    gap: 10vw;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    z-index: 1;
+}
+
+
+
+main {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.listaPets {
+    display: flex;
+    gap: 8vw;
+    align-items: center;
+    width: 100%;
+    padding: 1vh 3vw;
+    overflow-y: scroll;
+    height: 88vh;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.cardPet {
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    min-width: 235px;
+    max-width: 235px;
+    min-height:320px ;
+    background-color: var(--white-1);
+    box-shadow: 0px 0px 18px -5px var(--brand-1);
+    position: relative;
+}
+
+.fotoPet {
+    width: 100%;
+    min-height: 180px;
+    max-height: 180px;
+}
+
+.fotoPet img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px 20px 0 0;
+    object-fit: cover;
+}
+
+.infoPet {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.nomePet {
+    color: var(--brand-1);
+    font-weight: 700;
+    font-size: var(--font-5);
+    width: 100%;
+    height: fit-content;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-transform: capitalize;
+}
+
+.especiePet {
+    color: var(--black);
+    font-weight: 600;
+    font-size: var(--font-3);
+    margin-top: 10px;
+}
+
+footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    height: 4vh;
+    background-color: var(--brand-opaca);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p {
+    font-size: var(--font-7);
+    color: var(--brand-1);
+}
+
+
+@media (min-width: 769px) {
+    header {
+        height: 9vh;
+        padding: 1vh 5vw;
+    }
+
+    header img {
+        height: 30px;
+    }
+
+    .menuNavegacao{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    
+    .naoAparecer {
+        display: flex;
+    }
+    
+    nav {
+        background-color: inherit;
+        padding: 0;
+        border-bottom: none;
+        position: relative;
+        top: 0;
+        gap: 5vw;
+        width: fit-content;
+    }
+
+    .listaPets {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 3vw;
+        justify-content: space-around;
+        overflow-y: scroll;
+        height: 65vh;
+        width: 100%;
+        margin: 5% auto;
+    }
+    
+    .infoPet{
+        padding: 0 15px;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        gap: 10px;
+    }
+
+    .nomePet{
+        color: var(--alert-success);
+    }
+
+    .botaoAdocao{
+        margin: 10px;
+    }
+
+    .cardPet {
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        min-width: 280px;
+        max-width: 280px;
+        background-color: var(--white-1);
+        box-shadow: 0px 0px 18px -5px var(--brand-1);
+    }
+
+    .fotoPet {
+        border-radius: 8px 8px 0 0;
+        height: 235px;
+    }
+
+    .fotoPet img {
+        width: 100%;
+        max-height: 235px;
+        border-radius: 8px 8px 0 0;
+        object-fit: cover;
+        object-position: center;
+    }
+}
